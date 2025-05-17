@@ -1,6 +1,7 @@
 package net.ianhwang.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.ianhwang.tutorialmod.block.ModBlocks;
 import net.ianhwang.tutorialmod.item.ModCreativeModeTabs;
 import net.ianhwang.tutorialmod.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -33,7 +34,7 @@ public class TutorialMod
         IEventBus modEventBus = context.getModEventBus();
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
